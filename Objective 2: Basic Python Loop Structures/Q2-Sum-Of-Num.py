@@ -11,3 +11,7 @@ numbers = [10, 20, 30, 40, 50]  # List of numbers
 total_sum = 0
 
 # Use a for loop to iterate through the numbers
+for numbers in numbers:
+    total_sum += numbers
+    
+print(f"\nTotal sum of the numbers from the 'numbers' list is {total_sum}.")

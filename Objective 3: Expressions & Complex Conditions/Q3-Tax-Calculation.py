@@ -8,3 +8,14 @@ Description: Write a program that calculates the tax on a purchase based on the 
 price = float(input("Enter the price of the item: "))
 
 # Use complex conditions to calculate the tax rate
+if price >= 100:
+    tax = 0.10
+
+    purchase = price + (price * tax)
+    print(f"\nYour total purchase is ${purchase:.2f}")
+
+elif price < 100:
+    tax = 0.08
+
+    purchase = price + (price * tax)
+    print(f"\nYour total purchase is ${purchase:.2f}")

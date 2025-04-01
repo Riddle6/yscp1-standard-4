@@ -5,7 +5,24 @@ Description: Write a program that takes a temperature input from the user and pr
 '''
 
 # This program will check the temperature and give a weather update
+while True:
+    try:
+        temperature = float(input("Enter the temperature in °C: "))
 
-temperature = float(input("Enter the temperature in °C: "))
+        if temperature != None:
+            break
+
+    except ValueError:
+        print("\nInvalid Temperature Value! Please try again.\n")
+
 
 # Complete the if-elif-else logic here
+
+if temperature <= 5:
+    print(f"\nThe weather is {temperature:.2f} °C outside right now. It is freezing!")
+
+elif temperature < 32 and temperature > 5:
+    print(f"\nThe weather is {temperature:.2f} °C outside right now. It is chilly, maybe even warm!")
+
+else:
+    print(f"\nThe weather is {temperature:.2f} °C outside right now. It is pretty warm!")

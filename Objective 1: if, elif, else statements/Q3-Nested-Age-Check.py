@@ -10,7 +10,33 @@ If the person’s age is 18 or 21, print "Young Adult".
 '''
 
 # This program will check age categories
+while True:
+    try:
+        age = int(input("Enter your age: "))
+        
+        if age != None:
+            break
 
-age = int(input("Enter your age: "))
+    except ValueError:
+        print("\nThat is not a valid age number! Please try again.\n")
 
 # Add if-elif-else logic here with nested conditions
+if age < 13:
+    print("\nChild")
+
+elif age >= 13 and age <= 19:
+    # First Nested if/else statement.
+    if age != 18:
+        print("\nTeenager")
+    elif age == 18:
+        print("\nYoung Adult")
+
+elif age >= 20 and age <= 64:
+    # Second Nested if/else statement.
+    if age != 21:
+        print("\nAdult")
+    elif age == 21:
+        print("\nYoung Adult")
+
+elif age >= 65:
+    print("\nSenior")
